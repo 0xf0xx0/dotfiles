@@ -1,0 +1,21 @@
+#!/bin/bash
+
+##############################################
+##            Author: Gïng Pepper           ##
+##     https://experibassmusic.eth.limo     ##
+##############################################
+
+STEP=5       # Step Up/Down brightnes by: 5 = ".05", 10 = ".10", etc.
+
+notify() {
+    value=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+%' | head -n1)
+    dunstify -t 2000 "Volume: ${value}" -h string:x-dunst-stack-tag:system_volume
+}
+if [[ $1 == [uU][pP] ]] ; then
+    pactl set-sink-volume @DEFAULT_SINK@ +"$STEP"%
+    $(notify)
+fi
+if [[ $1 == [dD][oO][wW][nN] ]] ; then
+    pactl set-sink-volume @DEFAULT_SINK@ -"$STEP"%
+    $(notify)
+fi

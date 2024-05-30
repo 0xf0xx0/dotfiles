@@ -1,0 +1,14 @@
+#!/bin/bash
+
+NEW_PAPER=$1
+PAPER=~/.config/i3/custom/wallpaper
+
+rm $PAPER
+echo "resizing image"
+magick "$NEW_PAPER" -resize 2560x1600! $PAPER
+echo "setting wallpaper"
+feh --no-fehbg --bg-scale $PAPER
+echo "setting lockscreen"
+betterlockscreen -u $PAPER
+echo "setting login screen"
+cp -rv $PAPER /usr/share/sddm/themes/forestfall/Backgrounds/wallpaper

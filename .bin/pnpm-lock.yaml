@@ -1,0 +1,15 @@
+lockfileVersion: 5.3
+
+specifiers:
+  .bin: 'link:'
+  ani-cli: ^1.0.0
+
+dependencies:
+  .bin: 'link:'
+  ani-cli: 1.0.0
+
+packages:
+
+  /ani-cli/1.0.0:
+    resolution: {integrity: sha1-Nt8Q7p+jIG/D+DI9HRsA07Zy9JE=}
+    dev: false
