@@ -291,7 +291,8 @@ h3 {
 [class*="autocomplete_"]
   [aria-disabled="false"][class*="clickable_"]
   [class^="base_"]:hover {
-  background: var(--url-color);
+  background: #0000;
+  border-bottom: 3px solid var(--url-color);
 }
 
 /* message bar fix */
@@ -315,8 +316,8 @@ h3 {
 /* Make the emote tray short and stout */
 [class*="drawerSizingWrapper_"] {
   /* does this count as !important abuse? */
-  width: 734px !important;
-  height: 360px !important;
+  width: 70% !important;
+  height: 72% !important;
   bottom: 0px !important;
   right: 0px !important;
 }
