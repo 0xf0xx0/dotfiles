@@ -96,7 +96,7 @@
 
   /* CHANNEL COLORS */
   --channel-unread: var(main-color);
-  /* Unread Server channel color[class*=" [default:  var(-"] THIS OVERRIDES YOUR MAIN COLOR*/
+  /* Unread Server channel color[class^=" [default:  var(-"] THIS OVERRIDES YOUR MAIN COLOR*/
   --channel-color: var(--main-color);
   /*Read Server channel color  [default: rgba(255,255,255,0.3);]*/
   --channel-text-selected: var(--text-normal);
@@ -265,7 +265,7 @@ h3 {
   color: var(--main-color) !important;
 }
 
-[class*="spoilerContent__"][class*="spoilerMarkdownContent__"][class*="hidden_"] {
+[class*="spoilerContent_"][class*="spoilerMarkdownContent_"][class*="hidden_"] {
   background: var(--main-color) !important;
 }
 
@@ -279,24 +279,31 @@ h3 {
 }
 
 /* autocomplete boxes */
-[class*="autocomplete_"] [class*="clickable_"] [class^="base_"] [class*="autocompleteRowHeading"] {
+[class*="autocomplete_"]
+  [class*="clickable_"]
+  [class^="base_"]
+  [class*="autocompleteRowHeading"] {
   color: var(--text-normal);
 }
-[class*="autocomplete_"] [aria-selected=true][class*="clickable_"] [class^="base_"],
-[class*="autocomplete_"] [aria-disabled=false][class*="clickable_"] [class^="base_"]:hover {
+[class*="autocomplete_"]
+  [aria-selected="true"][class*="clickable_"]
+  [class^="base_"],
+[class*="autocomplete_"]
+  [aria-disabled="false"][class*="clickable_"]
+  [class^="base_"]:hover {
   background: var(--url-color);
 }
 
 /* message bar fix */
-[class*="channelTextArea__"][class*="channelTextArea__"] {
+[class*="channelTextArea_"][class*="channelTextArea_"] {
   min-height: fit-content;
 }
-[class*="scrollableContainer__"][class*="themedBackground__"][class*="webkit__"] {
+[class*="scrollableContainer_"][class*="themedBackground_"] {
   height: 100%;
 }
 
 /* remove border */
-[class*="channelTextArea__"]:focus-within {
+[class*="channelTextArea_"]:focus-within {
   box-shadow: none;
 }
 
@@ -306,7 +313,7 @@ h3 {
 }
 
 /* Make the emote tray short and stout */
-[class*="drawerSizingWrapper__"] {
+[class*="drawerSizingWrapper_"] {
   /* does this count as !important abuse? */
   width: 734px !important;
   height: 360px !important;
@@ -331,20 +338,20 @@ div[class*="scroller_"][class*="thin_"][class*="scrollerBase_"][class*="fade_"]
 
 /* remove decorations */
 [class*="avatarDecoration_"],
-[class*="profileEffects__"] {
+[class*="profileEffects_"] {
   display: none;
 }
 /* remove useless channel pills */
-[class*="newChannel__"] {
+[class*="newChannel_"] {
   display: none;
 }
 
 /* fixes */
 
 /* why is the settings so padded */
-[class*="sidebarRegion__"] {
+[class*="sidebarRegion_"] {
   flex: 1;
 }
-[class*="contentColumn__"] {
+[class*="contentColumn_"] {
   max-width: unset;
 }
