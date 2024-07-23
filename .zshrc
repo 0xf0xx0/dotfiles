@@ -46,7 +46,6 @@ alias ccat='highlight --style darkplus -O truecolor --stdout'
 alias time='/bin/time -f "%E real %U usermode %P %M Kb mem"'
 ## functions
 encodeqr() { qrencode $* -o - | feh -; }
-zlibd() { printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" | cat - "$@" | gzip -dc; }
 
 ## imports
 ### Development
