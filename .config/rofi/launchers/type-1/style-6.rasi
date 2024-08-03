@@ -9,16 +9,20 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,run,calc,emoji:rofimoji";
+    modi:                       "drun,run,calc,emoji:rofimoji";
     show-icons:                 true;
     display-drun:               " Apps";
     display-run:                " Run";
-    display-calc:		"󰪚 Calc";
-    display-emoji:		"🙂Emoji";
+    display-calc:		        "󰪚 Calc";
+    display-emoji:		        "🙂Emoji";
     display-filebrowser:        " Files";
     display-window:             " Windows";
-	drun-display-format:        "{name}";
-	window-format:              "{w} · {c} · {t}";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+
+    calc {
+	    calc-command: "echo -n '{result}' | xclip";
+    }
 }
 
 /*****----- Global Properties -----*****/

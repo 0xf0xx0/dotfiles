@@ -13,6 +13,8 @@
     "telemetry": {
         "metrics": false
     },
+    "formatter": "auto",
+    "format_on_save": "off",
     "tab_size": 4,
     "buffer_font_family": "Fira Code",
     "ui_font_family": "Fira Code",
