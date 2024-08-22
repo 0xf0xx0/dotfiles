@@ -16,6 +16,7 @@ configuration {
     display-calc:		        "󰪚 Calc";
     display-emoji:		        "🙂Emoji";
     display-filebrowser:        " Files";
+    display-networkmanager: 	"󰖩 Net";
     display-window:             " Windows";
     drun-display-format:        "{name}";
     window-format:              "{w} · {c} · {t}";

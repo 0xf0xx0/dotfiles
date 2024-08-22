@@ -337,6 +337,16 @@ div[class*='scroller_'][class*='thin_'][class*='scrollerBase_'][class*='fade_'] 
     display: none;
 }
 
+/* remove useless activities button */
+[class*='channelAppLauncher_'] > div > button {
+    display: none;
+}
+
+/* remove useless textbox buttons */
+[class*='channelTextArea_'] [class*='buttons_'] .expression-picker-chat-input-button:nth-child(n+4):nth-child(-n+5) {
+    display: none;
+    /* background-color:#e31515; */
+}
 /* fixes */
 
 /* why is the settings so padded */
