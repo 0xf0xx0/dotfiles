@@ -18,7 +18,7 @@ backlight=$(xbacklight -get)
 keeb_backlight=$(backlight_get)
 background=~/.config/i3/custom/lock.png
 #magick ~/.config/i3/custom/wallpaper "$background"
-#xbacklight -set 0 -steps 10 && 
+    xbacklight -set 0 -steps 10 && 
     ~/.bin/keyboard-backlight 0 &&
     #dunstctl set-paused "true" &&
     #i3lock --tiling -ni "$background" &&
