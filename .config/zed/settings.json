@@ -7,19 +7,55 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+    /// meh
     "features": {
         "inline_completion_provider": "none"
     },
     "telemetry": {
+        "diagnostics": true,
         "metrics": false
     },
-    "formatter": "auto",
-    "format_on_save": "off",
-    "tab_size": 4,
+    "assistant": {
+        "enabled": false,
+        "version": "2"
+    },
+    "collaboration_panel": {
+        "button": false
+    },
+    "chat_panel": {
+        "button": false
+    },
+    /// general
+    "auto_update": false,
+    "base_keymap": "VSCode",
+    "projects_online_by_default": false,
+    // "use_system_path_prompts": false,
+    "preview_tabs": {
+        "enable_preview_from_file_finder": true,
+        "enable_preview_from_code_navigation": true
+    },
+    /// code
+    "buffer_font_fallbacks": ["FiraCode Nerd Font Mono", "Noto Sans", "Apple Symbols"],
     "buffer_font_family": "Fira Code",
+    "buffer_font_size": 14,
+    "current_line_highlight":"all",
+    "format_on_save": "off",
+    "formatter": "auto",
+    "relative_line_numbers": false,
+    "scroll_beyond_last_line": "vertical_scroll_margin",
+    "seed_search_query_from_cursor": "selection",
+    "tab_size": 4,
+    /// ui
+    "ui_font_fallbacks": ["FiraCode Nerd Font Mono", "Noto Sans", "Apple Symbols"],
     "ui_font_family": "Fira Code",
     "ui_font_size": 14,
-    "buffer_font_size": 14,
+    "ui_font_features": {
+      "calt": true
+    },
+    "tabs": {
+        "git_status": true,
+        "file_icons": true
+    },
     "theme": {
         "mode": "system",
         "light": "forestfall",

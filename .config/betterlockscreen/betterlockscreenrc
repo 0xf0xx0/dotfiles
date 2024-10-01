@@ -47,4 +47,6 @@ bgcolor=000000ff
 
 # i3lock-color - custom arguments
 # lockargs=() 						  # overwriting default "(-n)"
-lockargs+=(--bar-indicator --bar-color "00000000" --redraw-thread --refresh-rate=0.1 --bar-count 75 --time-pos "40:750" --ind-pos "95:805" --pass-media-keys --pass-power-keys --pass-volume-keys)
+lockargs+=(--bar-indicator --bar-color "00000000" --redraw-thread --refresh-rate=0.1
+--bar-count 75 --time-pos "40:750" --ind-pos "95:805"
+--pass-media-keys --pass-power-keys --pass-volume-keys)
