@@ -271,7 +271,7 @@ h3 {
 [class*="wrapper-"],
 [class*="iconMention-"],
 [class*="iconMentionText-"]
-/* .mention, 
+/* .mention,
 .interactive, */ {
     color: var(--url-color) !important;
 }
@@ -355,4 +355,9 @@ div[class*='scroller_'][class*='thin_'][class*='scrollerBase_'][class*='fade_'] 
 }
 [class*='contentColumn_'] {
     max-width: unset;
+}
+
+/* discovery footer */
+nav[class*='guilds_'] div[class*='footer_'] {
+    display: none;
 }
