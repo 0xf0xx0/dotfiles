@@ -361,3 +361,7 @@ div[class*='scroller_'][class*='thin_'][class*='scrollerBase_'][class*='fade_'] 
 nav[class*='guilds_'] div[class*='footer_'] {
     display: none;
 }
+/* return the new ping to its proper place */
+div[class *='unreadMentionsIndicatorBottom_'][class*='unreadMentionsFixedFooter_fea3ef'] {
+    bottom: 0px;
+}
