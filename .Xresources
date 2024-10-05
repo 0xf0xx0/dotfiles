@@ -1,0 +1,19 @@
+! x config
+Xft.dpi: 192
+Xcursor.theme: Bibata-85cf9
+
+! zutty config
+Zutty.font: FiraCode
+Zutty.fontsize: 24
+Zutty.fg: #DBB28D
+Zutty.bg: #271424
+Zutty.cr: #5F547B
+
+! theem
+theme.background: #271424
+theme.foreground: #DBB28D
+theme.primary: #7477A4
+theme.secondary: #5F547B
+theme.alert: #AFBBD9
+theme.disabled: #AC7D69
+theme.invisible: #00000000
