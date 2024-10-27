@@ -5,7 +5,7 @@
 
 # OMZ Config
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_COMPDUMP=$ZSH/cache/zcompdump-$HOST
+export ZSH_COMPDUMP=$ZSH/cache/zcompdump #-$HOST
 ZSH_THEME=clean
 CASE_SENSITIVE="false"
 DISABLE_UPDATE_PROMPT="true"
@@ -29,13 +29,11 @@ source "$ZSH"/oh-my-zsh.sh
 ## aliases
 alias npm='pnpm'
 alias fl='env WINEPREFIX=/home/ging/.local/share/wineprefixes/fl-stuwudio wine64 $HOME/Desktop/FL\ Studio\ 20.lnk'
-alias vis='nocorrect vis'
 alias reload='source ~/.zshrc && echo -e "\\e[4;32mReloaded!\\e[0m"'
 alias tldr='nocorrect tldr'
 alias pnpm='nocorrect pnpm'
 alias pnpx='nocorrect pnpx'
 alias pipx='nocorrect pipx'
-alias stack='nocorrect stack'
 alias gh='nocorrect gh'
 alias nnn='nnn -edUHior'
 alias killall='nocorrect killall'
