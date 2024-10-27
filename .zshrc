@@ -5,6 +5,7 @@
 
 # OMZ Config
 export ZSH="$HOME/.oh-my-zsh"
+export ZSH_COMPDUMP=$ZSH/cache/zcompdump-$HOST
 ZSH_THEME=clean
 CASE_SENSITIVE="false"
 DISABLE_UPDATE_PROMPT="true"

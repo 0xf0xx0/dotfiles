@@ -3,9 +3,6 @@ set -eu
 # prepare
 root=`dirname "$0"`
 lnrs="ln --relative --symbolic"
-echo $root
-exit 0
-echo "whee"
 source "$root/.profile"
 
 # install omz
