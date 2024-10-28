@@ -2,11 +2,11 @@
  *
  * Author : Aditya Shakya (adi1090x)
  * Github : @adi1090x
- * 
+ *
  * Fonts
  *
  **/
 
 * {
-    font: "FiraCode Nerd Font 16";
+    font: "Fira Code Nerd Font 24";
 }

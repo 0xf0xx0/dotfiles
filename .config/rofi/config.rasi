@@ -2,22 +2,18 @@
  *
  * Author : Aditya Shakya (adi1090x)
  * Github : @adi1090x
- * 
+ *
  * Configuration For Rofi Version: 1.7.3
  **/
 @import "~/.config/rofi/forestfall.rasi"
 configuration {
 	/*---------- General setting ----------*/
-	modi: "drun,run,filebrowser,window";
-	font: "Fira Code 14";
 	case-sensitive: false;
 	cycle: true;
 	filter: "";
 	scroll-method: 0;
 	normalize-match: true;
-	show-icons: true;
 	icon-theme: "forestfall";
-/*	cache-dir: ;*/
 	steal-focus: false;
 	dpi: -1;
 
