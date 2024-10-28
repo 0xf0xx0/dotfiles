@@ -37,7 +37,7 @@
     "scrollbar": {
         "show":"auto"
     },
-    /// code
+    /// code !==
     "buffer_font_family": "Fira Code",
     "buffer_font_fallbacks": ["FiraCode Nerd Font Mono", "Noto Sans", "Apple Symbols"],
     "buffer_font_size": 14,

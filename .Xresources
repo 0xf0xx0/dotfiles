@@ -4,7 +4,7 @@ Xcursor.theme: Bibata-85cf9
 
 ! zutty config
 Zutty.font: FiraCode
-Zutty.fontsize: 24
+Zutty.fontsize: 32
 Zutty.fg: #DBB28D
 Zutty.bg: #271424
 Zutty.cr: #5F547B
