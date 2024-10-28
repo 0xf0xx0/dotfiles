@@ -8,5 +8,5 @@
  **/
 
 * {
-    font: "Fira Code Nerd Font 24";
+    font: "Fira Code Nerd Font 16";
 }
