@@ -5,7 +5,7 @@
  *
  * Rofi Theme File
  * Rofi Version: 1.7.3
- type 4 stype 2 tweaked
+ type 4 style 2 tweaked
  **/
 
 /*****----- Configuration -----*****/
@@ -17,14 +17,13 @@ configuration {
 @import                          "shared/colors.rasi"
 @import                          "shared/fonts.rasi"
 * {
-    /* Resolution : 1920x1080 */
     mainbox-spacing:             300px;
-    mainbox-margin:              0px 300px;
+    mainbox-margin:              0px 500px;
     message-margin:              0px 350px;
     message-padding:             0px;
     message-border-radius:       12px;
     listview-spacing:            50px;
-    element-padding:             40px 40px;
+    element-padding:             70px 40px;
     element-border-radius:       12px;
 
     prompt-font:                 "Fira Code Nerd Font Bold 72";
@@ -77,7 +76,7 @@ prompt {
 
 /*****----- Message -----*****/
 message {
-    enabled:                     true;
+    enabled:                     false;
     margin:                      var(message-margin);
     padding:                     var(message-padding);
     border-radius:               var(message-border-radius);
