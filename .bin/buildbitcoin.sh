@@ -7,4 +7,4 @@ wget http://git.localhost/minibolt-guide/minibolt/raw/branch/main/resources/ordi
 git apply ordisrespector.patch
 cmake -B build --install-prefix $PWD/out -DBUILD_TESTS=OFF -DWITH_ZMQ=ON
 cmake --build build -j 6
-cmake --install
+cmake --install build 
