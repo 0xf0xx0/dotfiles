@@ -18,4 +18,5 @@ show=$1
 ## Run
 rofi \
     -show "$1" \
-    -theme ${dir}/${theme}.rasi
+    -theme ${dir}/${theme}.rasi \
+    --action copy

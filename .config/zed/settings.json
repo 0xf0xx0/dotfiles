@@ -8,6 +8,21 @@
 // from the command palette or from `Zed` application menu.
 {
     /// meh
+    "ssh_connections": [
+    {
+      "host": "foxgoes.yip",
+      "username": "btcnode",
+      "projects": [
+        {
+          "paths": [
+            "~/Applications",
+            "~/prometheus-bitaxe"
+          ]
+        }
+      ],
+      "nickname": "trilago"
+    }
+  ],
     "features": {
         "inline_completion_provider": "none"
     },

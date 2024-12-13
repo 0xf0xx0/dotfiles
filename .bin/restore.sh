@@ -6,7 +6,7 @@ backup=$1 # path to backup dir
 pkglistdir=$2
 aurpkglist="$2/aur-packages.txt"
 pkglist="$2/packages.txt"
-dotfiles="https://github.com/experibass/linux-dotfiles"
+dotfiles="http://git.localhost/giing/linux-dotfiles"
 
 # set default yay options
 yay --batchinstall --sudoloop --cleanafter --save

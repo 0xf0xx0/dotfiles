@@ -1,10 +1,10 @@
 /**
  * @name Forestfall
- * @author ExperiBass
+ * @author 0xf0xx0
  * @version 6.9.0-ging
  *********************
  * @description Recolored ClearVision + ui tweaks
- * @source https://github.com/experibass/dotfiles/
+ * @source https://github.com/0xf0xx0/dotfiles/
  * @website https://clearvision.github.io
  * @invite dHaSxn3
  */
@@ -12,7 +12,7 @@
 /* Credits to Zerthox for making the original theme. */
 
 /* IMPORT CSS */
-@import url(https://clearvision.github.io/ClearVision-v6/main.css);
+@import url('https://clearvision.github.io/ClearVision-v6/main.css');
 @import url('https://raw.githubusercontent.com/DiscordStyles/RadialStatus/deploy/RadialStatus.theme.css');
 @import url('https://nyri4.github.io/Discolored/support/discolored.theme.css');
 
@@ -57,7 +57,7 @@
     /* member list width [default: 240px] */
 
     /* APP BACKGROUND */
-    --background-shading: 0%;
+    --background-shading: 100%;
     /* app background shading (0 for complete smoothness) [default: 100%] */
     --background-overlay: #271424;
     /* app background overlay color/gradient [default: rgba(0, 0, 0, 0.6)] */
@@ -83,7 +83,7 @@
     /* app background grayscale ( 0 - 100%) [default: 0%] */
     --background-sepia: 0%;
     /* app background sepia (0 - 100%) [default: 0%] */
-    --background-blur: 0px;
+    --background-blur: 1rem;
     /* app background blur [default: 0px] */
 
     /* HOME BUTTON ICON */
@@ -210,6 +210,8 @@
         --success-color
     ); /* Colour for speaking ring in the bottom left while in a voice chat/call */
     --rs-phone-color: var(--rs-online-color);
+
+    --discord-transition: all .15s ease-in-out,transform .1s ease-in-out; /* discords transition setting */
 }
 
 ::selection {
@@ -217,6 +219,7 @@
     background: var(--url-color);
 }
 
+/* text-normal color force */
 [class*='match-'],
 [class*='overflow-'],
 [class*='subText-'],
@@ -240,8 +243,8 @@ h2,
 h3 {
     color: var(--text-normal) !important;
 }
+/* text main-color force */
 [class*='discriminator-'],
-[class*='text-'],
 [class*='button-'],
 [class*='linkButtonIcon-'],
 [class*='searchBarComponent-'],
@@ -265,6 +268,11 @@ h3 {
 
 [class*='spoilerContent_'][class*='spoilerMarkdownContent_'][class*='hidden_'] {
     background: var(--main-color) !important;
+}
+
+/* text color force */
+[class*='barText_'] {
+    color: var(--color)
 }
 
 .channelMention,
@@ -307,6 +315,25 @@ h3 {
     display: none;
 }
 
+/* remove scrollbar */
+/* dm/channel list */
+[class*='scroller_'][class*='thin_'][class*='scrollerBase_'][class*='fade_']::-webkit-scrollbar,
+/* member list */
+[class*='members_'][class*='thin_'][class*='scrollerBase_'][class*='fade_']::-webkit-scrollbar{
+    display: none;
+}
+[class*='scroller_'][class*='thin_'][class*='scrollerBase_'][class*='fade_'] {
+    margin-right: 8px !important;
+}
+/* uncrop members */
+[class*='members_'] [class*='member_'] {
+    max-width: var(--members-width);
+}
+/* and fatten */
+[class*='layout_'] {
+    padding: 0;
+}
+
 /* Make the emote tray short and stout */
 [class*='drawerSizingWrapper_'] {
     /* does this count as !important abuse? */
@@ -320,13 +347,31 @@ h3 {
     background-color: var(--popout-color);
 }
 
+/* quick switcher backdrop */
+div[class*='backdrop_'][class*='withLayer_'] {
+    background: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(1rem) !important;
+    /* transition: var(--discord-transition); */
+}
+/* expanded folder bg */
+span[class*='expandedFolderBackground_'] {
+    background: rgba(0, 0, 0, calc(var(--background-shading) * 0.2))
+}
 /* remove shop and nitromenu */
-/* div.scroller_c47fa9.thin_eed6a8.scrollerBase_eed6a8.fade_eed6a8 > ul > li:nth-child(3), */
-div[class*='scroller_'][class*='thin_'][class*='scrollerBase_'][class*='fade_'] > ul > li:nth-child(5),
+div[class*='scroller_'][class*='thin_'][class*='scrollerBase_'][class*='fade_'] > ul > li:nth-child(4),
 div[class*='scroller_'][class*='thin_'][class*='scrollerBase_'][class*='fade_'] > ul > li:nth-child(3) {
     display: none;
 }
 
+/* transparent popouts */
+[id*='popout_'], [id*='popout_'] [class*='outer_'] {
+    background: var(--popout-color);
+}
+[id*='popout_'] [class*='outer_'],
+[id*='popout_'] [class*='inner_']
+{
+    background: transparent !important;
+}
 /* remove decorations */
 [class*='avatarDecoration_'],
 [class*='profileEffects_'] {
@@ -343,9 +388,8 @@ div[class*='scroller_'][class*='thin_'][class*='scrollerBase_'][class*='fade_'] 
 }
 
 /* remove useless textbox buttons */
-[class*='channelTextArea_'] [class*='buttons_'] .expression-picker-chat-input-button:nth-child(n+4):nth-child(-n+5) {
+[class*='channelTextArea_'] [class*='buttons_'] *:nth-child(n + 3):nth-child(-n + 5) {
     display: none;
-    /* background-color:#e31515; */
 }
 /* fixes */
 
@@ -362,6 +406,6 @@ nav[class*='guilds_'] div[class*='footer_'] {
     display: none;
 }
 /* return the new ping to its proper place */
-div[class *='unreadMentionsIndicatorBottom_'][class*='unreadMentionsFixedFooter_fea3ef'] {
+div[class*='unreadMentionsIndicatorBottom_'][class*='unreadMentionsFixedFooter_fea3ef'] {
     bottom: 0px;
 }

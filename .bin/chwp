@@ -1,14 +1,18 @@
 #!/bin/bash
+set -eu
+NEW_PAPER="$1"
+PAPER="$HOME/.config/i3/custom/wallpaper"
 
-NEW_PAPER=$1
-PAPER=~/.config/i3/custom/wallpaper
-
-rm $PAPER
+rm "$PAPER"
 echo "resizing image"
-magick "$NEW_PAPER" -resize 2560x1600! $PAPER
+magick "$NEW_PAPER" -resize 2560x1600! "$PAPER"
 echo "setting wallpaper"
-feh --no-fehbg --bg-scale $PAPER
-echo "setting lockscreen"
-betterlockscreen -u $PAPER
-echo "setting login screen"
-cp -rv $PAPER /usr/share/sddm/themes/forestfall/Backgrounds/wallpaper
+feh --no-fehbg --bg-scale "$PAPER"
+echo "setting lockscreen wallpaper"
+betterlockscreen -u "$PAPER"
+echo "setting login wallpaper"
+cp -rv "$PAPER" /usr/share/sddm/themes/forestfall/Backgrounds/wallpaper
+echo "setting plymouth wallpaper"
+magick "$PAPER" /usr/share/plymouth/themes/forestfall/wallpaper.png
+# lol
+sudo kernel-install add "/usr/lib/modules/$(ls /usr/lib/modules | cut -d' ' -f 1 | sort -V | tail -n -1)/vmlinuz"

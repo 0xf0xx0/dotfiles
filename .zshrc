@@ -1,11 +1,6 @@
-# grab .profile
-#if [ -f $HOME/.profile ]; then
-#    source $HOME/.profile
-#fi
-
 # OMZ Config
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_COMPDUMP=$ZSH/cache/zcompdump #-$HOST
+export ZSH_COMPDUMP=$ZSH/cache/zcompdump
 ZSH_THEME=clean
 CASE_SENSITIVE="false"
 DISABLE_UPDATE_PROMPT="true"
@@ -23,26 +18,23 @@ fi
 source "$ZSH"/oh-my-zsh.sh
 
 # User configuration
-
-## envsetup
-
 ## aliases
-alias npm='pnpm'
+alias ccat='highlight --style darkplus -O truecolor --stdout'
+alias cp='cp -rv'
+alias ferium='nocorrect ferium'
 alias fl='env WINEPREFIX=/home/ging/.local/share/wineprefixes/fl-stuwudio wine64 $HOME/Desktop/FL\ Studio\ 20.lnk'
-alias reload='source ~/.zshrc && echo -e "\\e[4;32mReloaded!\\e[0m"'
-alias tldr='nocorrect tldr'
-alias pnpm='nocorrect pnpm'
-alias pnpx='nocorrect pnpx'
-alias pipx='nocorrect pipx'
+alias foresta='git-foresta --reverse --all --style 15 --graph-symbol-tip ┻ --graph-symbol-commit ┠ --graph-symbol-merge ┣ --graph-symbol-overpass ━'
 alias gh='nocorrect gh'
-alias nnn='nnn -edUHior'
 alias killall='nocorrect killall'
 alias nf='neowofetch'
-alias cp='cp -ruv'
-alias ferium='nocorrect ferium'
-alias yiff='nocorrect yay'
-alias ccat='highlight --style darkplus -O truecolor --stdout'
+alias nnn='nnn -edUHior'
+alias pipx='nocorrect pipx'
+alias pnpm='nocorrect pnpm'
+alias pnpx='nocorrect pnpx'
+alias reload='source ~/.zshrc && echo -e "\\e[4;32mReloaded!\\e[0m"'
 alias time='/bin/time -f "%E real %U usermode %P %M Kb mem"'
+alias tldr='nocorrect tldr'
+alias yiff='nocorrect yay'
 ## functions
 encodeqr() { qrencode $* -o - | feh -; }
 
@@ -68,16 +60,13 @@ alias lansetup='sudo sysctl net.ipv4.ip_forward=1 && sudo iptables -t nat -A POS
 alias lanup='nmcli device connect wlan1'
 alias landown='nmcli device disconnect wlan1'
 
-### Fix driver load error (use iHD instead of i965)
-export LIBVA_DRIVER_NAME=iHD
-
-# install script mods
+# setup completion
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 
 # pnpm
-export PNPM_HOME="/home/ging/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
