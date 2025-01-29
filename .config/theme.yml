@@ -1,0 +1,29 @@
+border-radius: "12px"
+colors:
+# 40% steps
+    bg:
+        - "#25312d" # +5%
+        - "#1B2421" # main
+        - "#161d1a" # -20%
+        - "#101614"
+        - "#0b0e0d" # -60%
+    text:
+        - "#cdd4d2"
+        - "#ACB7B4" # main
+        - "#869692" # -20%
+        - "#63726e"
+    primary: # accent
+        - "#aba095" # +20%
+        - "#96887A" # main
+        - "#5b5248"
+        - "#3d3630" # -60%
+    secondary:
+        - "#857e6a" # +20%
+        - "#5F5A4C" # main
+        - "#4c483d" # -20%
+        - "#39362e"
+    disabled:
+        - "#556364" # main
+        - "#333b3c"
+    links: # saturated primary by 20%
+        - "#ab8865" # main

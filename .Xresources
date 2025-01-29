@@ -5,15 +5,27 @@ Xcursor.theme: Bibata-85cf9
 ! zutty config
 Zutty.font: FiraCode
 Zutty.fontsize: 32
-Zutty.fg: #DBB28D
-Zutty.bg: #271424
-Zutty.cr: #5F547B
+Zutty.fg: #ACB7B4
+Zutty.bg: #161d1a
+Zutty.cr: #ACB7B4
 
 ! theem
-theme.background: #271424
-theme.foreground: #DBB28D
-theme.primary: #7477A4
-theme.secondary: #5F547B
-theme.alert: #AFBBD9
-theme.disabled: #AC7D69
-theme.invisible: #00000000
+*background:  #161d1a
+*cursorColor:  #ACB7B4
+*foreground:  #ACB7B4
+*color0:  #161d1a
+*color1:  #f95415
+*color2:  #857f5f
+*color3:  #f97d1c
+*color4:  #0065ff
+*color5:  #e30078
+*color6:  #00529d
+*color7:  #8fa09f
+*color8:  #273231
+*color9:  #f96362
+*color10:  #96887a
+*color11:  #f95c15
+*color12:  #7b90ff
+*color13:  #a7006c
+*color14:  #2062af
+*color15:  #acb7b4
