@@ -8,7 +8,11 @@ echo "resizing image"
 magick "$NEW_PAPER" -resize 2560x1600! "$PAPER"
 echo "setting wallpaper"
 feh --no-fehbg --bg-scale "$PAPER"
-echo "setting lockscreen"
+echo "setting lockscreen wallpaper"
 betterlockscreen -u "$PAPER"
-echo "setting login screen"
+echo "setting login wallpaper"
 cp -rv "$PAPER" /usr/share/sddm/themes/forestfall/Backgrounds/wallpaper
+echo "setting plymouth wallpaper"
+magick "$PAPER" /usr/share/plymouth/themes/forestfall/wallpaper.png
+# lol
+sudo kernel-install add "/usr/lib/modules/$(ls /usr/lib/modules | cut -d' ' -f 1 | sort -V | tail -n -1)/vmlinuz"

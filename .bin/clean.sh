@@ -1,6 +1,5 @@
 set -eu
 
-pnpm prune
-npm store prune
+pnpm store prune
 yarn cache clean
 yay -Sc

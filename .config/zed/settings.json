@@ -15,17 +15,22 @@
       "projects": [
         {
           "paths": [
-            "~/Applications"
-          ]
-        },
-        {
-          "paths": [
             "~/Applications/go-crawl"
           ]
         },
         {
           "paths": [
+            "~/Applications/lndash"
+          ]
+        },
+        {
+          "paths": [
             "~/Applications/unified-thetia"
+          ]
+        },
+        {
+          "paths": [
+            "~/prometheus-bitaxe"
           ]
         }
       ],
