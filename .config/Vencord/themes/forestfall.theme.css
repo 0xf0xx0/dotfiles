@@ -19,15 +19,15 @@
 /* SETTINGS */
 :root {
     /* ACCENT COLORS */
-    --main-color: #ac7d69;
+    --main-color: #7a6d60;
     /* main accent color (hex, rgb or hsl) [default: #2780e6] */
     --hover-color: var(--main-color);
     /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
-    --success-color: #2ec752;
+    --success-color: #96887A;
     /* success accent color (hex, rgb or hsl) [default: #43b581] */
     --danger-color: #e31515;
     /* danger accent color (hex, rgb or hsl) [default: #982929] */
-    --url-color: #7477a4;
+    --url-color: #a59f8e;
     /*The color of url links [default: var(--main-color)]*/
 
     /* STATUS COLORS */
@@ -47,9 +47,9 @@
     /* main font for app (font must be installed) [default: gg sans, Helvetica Neue, Helvetica, Arial, sans-serif] */
     --code-font: Fira Code;
     /* font for codeblocks (font must be installed) [default: Consolas, Liberation Mono, Menlo, Courier, monospace] */
-    --text-normal: #dbb28d;
+    --text-normal: #ACB7B4;
     /* color of default discord text */
-    --text-muted: #ac7d69;
+    --text-muted: #869692;
     /* color of default discord muted text (e.g.text found in input fields before typing).*/
     --channels-width: 15rem;
     /* channel list width (240px for Discord default) [default: 220px] */
@@ -59,7 +59,7 @@
     /* APP BACKGROUND */
     --background-shading: 100%;
     /* app background shading (0 for complete smoothness) [default: 100%] */
-    --background-overlay: #271424;
+    --background-overlay: #1B2421;
     /* app background overlay color/gradient [default: rgba(0, 0, 0, 0.6)] */
     --background-image: transparent;
     /* app background image (link must be HTTPS) [default: url(https://clearvision.github.io/images/sapphire.jpg)]*/
@@ -83,7 +83,7 @@
     /* app background grayscale ( 0 - 100%) [default: 0%] */
     --background-sepia: 0%;
     /* app background sepia (0 - 100%) [default: 0%] */
-    --background-blur: 1rem;
+    --background-blur: 0.5rem;
     /* app background blur [default: 0px] */
 
     /* HOME BUTTON ICON */
@@ -218,7 +218,6 @@
     color: var(--text-normal);
     background: var(--url-color);
 }
-
 /* text-normal color force */
 [class*='match-'],
 [class*='overflow-'],
@@ -298,7 +297,7 @@ h3 {
 }
 
 /* message bar fix */
-[class*='channelTextArea_'][class*='channelTextArea_'] {
+[class*='channelTextArea_'] {
     min-height: fit-content;
 }
 [class*='scrollableContainer_'][class*='themedBackground_'] {
@@ -330,8 +329,8 @@ h3 {
     max-width: var(--members-width);
 }
 /* and fatten */
-[class*='layout_'] {
-    padding: 0;
+[class*='memberInner_'][class*='layout_'] {
+    padding: 0 0.2rem;
 }
 
 /* Make the emote tray short and stout */
@@ -350,7 +349,7 @@ h3 {
 /* quick switcher backdrop */
 div[class*='backdrop_'][class*='withLayer_'] {
     background: rgba(0, 0, 0, 0.7) !important;
-    backdrop-filter: blur(1rem) !important;
+    backdrop-filter: blur(var(--background-blur)) !important;
     /* transition: var(--discord-transition); */
 }
 /* expanded folder bg */
@@ -370,6 +369,11 @@ div[class*='scroller_'][class*='thin_'][class*='scrollerBase_'][class*='fade_'] 
 [id*='popout_'] [class*='outer_'],
 [id*='popout_'] [class*='inner_']
 {
+    background: transparent !important;
+    backdrop-filter: blur(var(--user-popout-blur));
+}
+/* user popout dm input */
+[class*='inner_'] [class*='channelTextArea_'] {
     background: transparent !important;
 }
 /* remove decorations */
