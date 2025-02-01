@@ -45,7 +45,7 @@
         "tab.active_background": "#1B2421",
         "search.match_background": null,
         "panel.background": "#101614",
-        "panel.focused_border": null,
+        "panel.focused_border": "#ACB7B4",
         "pane.focused_border": null,
         "scrollbar_thumb.background": "#96887A66",
         "scrollbar.thumb.hover_background": "#96887A70",
@@ -206,7 +206,7 @@
           }
         },
         "tab.active_foreground": "#cdd4d2",
-        "background.appearance": "blurred"
+        "background.appearance": "transparent"
       }
     }
   ]
