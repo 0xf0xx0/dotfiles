@@ -83,7 +83,7 @@
     /* app background grayscale ( 0 - 100%) [default: 0%] */
     --background-sepia: 0%;
     /* app background sepia (0 - 100%) [default: 0%] */
-    --background-blur: 0.5rem;
+    --background-blur: 1rem;
     /* app background blur [default: 0px] */
 
     /* HOME BUTTON ICON */
@@ -301,7 +301,11 @@ h3 {
     min-height: fit-content;
 }
 [class*='scrollableContainer_'][class*='themedBackground_'] {
-    height: 100%;
+    min-height: fit-content;
+}
+[class*='fontSize14Padding__'] {
+    padding-bottom: 0.9rem;
+    padding-top: 0.8rem;
 }
 
 /* remove border */
@@ -409,7 +413,7 @@ div[class*='scroller_'][class*='thin_'][class*='scrollerBase_'][class*='fade_'] 
 nav[class*='guilds_'] div[class*='footer_'] {
     display: none;
 }
-/* return the new ping to its proper place */
-div[class*='unreadMentionsIndicatorBottom_'][class*='unreadMentionsFixedFooter_fea3ef'] {
+/* return the "new mention" to its proper place */
+div[class*='unreadMentionsIndicatorBottom_'][class*='unreadMentionsFixedFooter_'] {
     bottom: 0px;
 }
