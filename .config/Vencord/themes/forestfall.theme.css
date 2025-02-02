@@ -155,7 +155,7 @@
     /* user popout background grayscale (0 - 100%) [default: var(--background-grayscale)] */
     --user-popout-sepia: var(--background-sepia);
     /* user popout background sepia (0 - 100%) [default: var(--background-sepia)] */
-    --user-popout-blur: calc(var(--background-blur) + 3px);
+    --user-popout-blur: calc(var(--background-blur) / 3);
     /* user popout background blur [default: calc(var(--background-blur) + 3px)] */
     --user-popout-overlay: var(--background-overlay);
     /* user popout overlay color [default: rgba(0, 0, 0, .6)] */
