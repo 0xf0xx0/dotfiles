@@ -9,22 +9,32 @@
 {
     /// meh
     "ssh_connections": [
-    {
-      "host": "foxgoes.yip",
-      "username": "btcnode",
-      "projects": [
         {
-          "paths": [
-            "~/Applications",
-            "~/prometheus-bitaxe"
-          ]
+            "host": "foxgoes.yip",
+            "username": "btcnode",
+            "projects": [
+                {
+                    "paths": ["~/Applications"]
+                },
+                {
+                    "paths": ["~/prometheus-bitaxe"]
+                }
+            ],
+            "nickname": "trilago"
         }
-      ],
-      "nickname": "trilago"
-    }
-  ],
+    ],
+    "gutter": {
+        // Whether to show line numbers in the gutter.
+        "line_numbers": true,
+        // Whether to show code action buttons in the gutter.
+        "code_actions": false,
+        // Whether to show runnables buttons in the gutter.
+        "runnables": false,
+        // Whether to show fold buttons in the gutter.
+        "folds": true
+    },
     "features": {
-        "inline_completion_provider": "none"
+        "edit_prediction_provider": "none"
     },
     "telemetry": {
         "diagnostics": true,
@@ -38,7 +48,7 @@
         "button": false
     },
     "chat_panel": {
-        "button": false
+        "button": "never"
     },
     /// general
     "auto_update": false,
@@ -50,13 +60,17 @@
         "enable_preview_from_code_navigation": true
     },
     "scrollbar": {
-        "show":"auto"
+        "show": "auto"
     },
     /// code !==
     "buffer_font_family": "Fira Code",
-    "buffer_font_fallbacks": ["FiraCode Nerd Font Mono", "Noto Sans", "Apple Symbols"],
-    "buffer_font_size": 14,
-    "current_line_highlight":"all",
+    "buffer_font_fallbacks": [
+        "FiraCode Nerd Font Mono",
+        "Noto Sans",
+        "Apple Symbols"
+    ],
+    "buffer_font_size": 14.0,
+    "current_line_highlight": "all",
     "format_on_save": "off",
     "formatter": "auto",
     "relative_line_numbers": false,
@@ -65,10 +79,14 @@
     "tab_size": 4,
     /// ui
     "ui_font_family": "Fira Code",
-    "ui_font_fallbacks": ["FiraCode Nerd Font Mono", "Noto Sans", "Apple Symbols"],
+    "ui_font_fallbacks": [
+        "FiraCode Nerd Font Mono",
+        "Noto Sans",
+        "Apple Symbols"
+    ],
     "ui_font_size": 14,
     "ui_font_features": {
-      "calt": true
+        "calt": true
     },
     "tabs": {
         "git_status": true,

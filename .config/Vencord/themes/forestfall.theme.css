@@ -95,7 +95,7 @@
     /* home button icon size [default: 40px] */
 
     /* CHANNEL COLORS */
-    --channel-unread: var(main-color);
+    --channel-unread: var(--main-color);
     /* Unread Server channel color[class^=" [default:  var(-"] THIS OVERRIDES YOUR MAIN COLOR*/
     --channel-color: var(--main-color);
     /*Read Server channel color  [default: rgba(255,255,255,0.3);]*/
@@ -216,7 +216,7 @@
 
 ::selection {
     color: var(--text-normal);
-    background: var(--url-color);
+    background: #3d3630;
 }
 /* text-normal color force */
 [class*='match-'],

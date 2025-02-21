@@ -1,6 +1,6 @@
 ! x config
 Xft.dpi: 192
-Xcursor.theme: Bibata-85cf9
+Xcursor.theme: bibata-forestfall
 
 ! zutty config
 Zutty.font: FiraCode

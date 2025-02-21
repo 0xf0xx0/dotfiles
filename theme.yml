@@ -17,14 +17,22 @@ colors:
         - "#aba095" # +20%
         - "#96887A" # main
         - "#5b5248"
-        - "#3d3630" # -60%
+        - "#3d3630" # -60%, used for selection bg
     secondary:
         - "#857e6a" # +20%
         - "#5F5A4C" # main
         - "#4c483d" # -20%
         - "#39362e"
-    disabled:
+    disabled: # "gray"
         - "#556364" # main
         - "#333b3c"
     links: # saturated primary by 20%
         - "#ab8865" # main
+    everforest:
+        red: "#e67e80"
+        orange: "#e69875"
+        yellow: "#dbbc7f"
+        green: "#a7c080"
+        blue: "#7fbbb3"
+        aqua: "#83c092"
+        purple: "#d699b6"

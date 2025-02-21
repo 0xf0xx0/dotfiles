@@ -18,6 +18,7 @@ fi
 source "$ZSH"/oh-my-zsh.sh
 
 # User configuration
+# PATH in /etc/profile.d/localpath
 ## aliases
 alias ccat='highlight --style darkplus -O truecolor --stdout'
 alias cp='cp -rv'
